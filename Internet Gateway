@@ -1,0 +1,9 @@
+resource "aws_internet_gateway" "deepak-ig" {
+	depends_on 			= [ aws_vpc.deepak-vpc ,]
+	
+	vpc_id 				= aws_vpc.deepak-vpc.id
+	
+	tags = {
+		Name = "deepak-ig"
+	}
+}
